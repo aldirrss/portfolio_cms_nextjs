@@ -1,0 +1,12 @@
+<svg viewBox="0 0 400 400"
+  xmlns="http://www.w3.org/2000/svg" fill="none">
+  <!-- Large 404 text -->
+  <text x="200" y="200" font-size="80" font-weight="bold" text-anchor="middle" fill="#234a9c" opacity="0.9">
+    404
+  </text>
+
+  <!-- Not Found label -->
+  <text x="200" y="260" font-size="24" text-anchor="middle" fill="#234a9c" opacity="0.7">
+    Image Not Found
+  </text>
+</svg>

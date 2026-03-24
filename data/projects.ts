@@ -37,7 +37,7 @@ export const projects: Project[] = [
     description:
       "Designed and developed an Android application for managing inventory and sales of a hijab retail business. The app features product catalog management, order processing, customer tracking, and sales analytics. Built with Kotlin and integrated with a Laravel backend for seamless data synchronization.",
     imageUrl:
-      "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&h=400&fit=crop",
+      "/not_found.svg",
     tags: ["Kotlin", "PHP", "Laravel", "MySQL", "Rest API", "Payments Gateway", "Midtrans"],
     category: "android",
     liveUrl: "",
@@ -55,7 +55,7 @@ export const projects: Project[] = [
     description:
       "Developed a comprehensive Android application for a car rental service, enabling users to browse available vehicles, make reservations, and manage their bookings. The app includes features such as real-time availability, secure payment processing, and user profile management. Built using Kotlin with a Laravel backend for robust data handling and synchronization.",
     imageUrl:
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop",
+      "/not_found.svg",
     tags: ["Kotlin", "PHP", "Laravel", "MySQL", "Rest API", "Face Recognition"],
     category: "android",
     liveUrl: "",
@@ -221,7 +221,7 @@ export const projects: Project[] = [
 export function getFeaturedProjects(limit = 3): Project[] {
   return projects
     .filter((p) => p.featured) // all projects are candidates; adjust filter as needed
-    .sort((a, b) => a.order - b.order)
+    .sort((a, b) => b.order - a.order)
     .slice(0, limit);
 }
 

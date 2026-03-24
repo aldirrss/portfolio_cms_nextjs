@@ -26,8 +26,7 @@ jobs:
             git pull origin main
             npm install
             npm run build
-            pm2 start ecosystem.config.js
-            pm2 save
+            pm2 restart portfolio-cms
             echo "✅ Deployment completed!"
 
       - name: Send Email (Success)
