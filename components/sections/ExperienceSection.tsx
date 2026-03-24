@@ -111,9 +111,8 @@ export default function ExperienceSection({ showHeader = false }: { showHeader?:
         <motion.div initial={{ opacity: 0, y: 30 }} animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.6 }} className="mt-16">
           <div className="text-slate-500 tracking-widest mb-6 uppercase text-center">
-            <span className="font-mono text-xs tracking-widest uppercase flex-shrink-0 text-[24px] font-bold"
-              style={{ color: "#00ffff" }}>
-              Education
+            <span className="font-mono text-xs tracking-widest uppercase flex-shrink-0 text-[24px] font-bold gradient-text">
+              // Education
             </span>
           </div>
           <div className="flex flex-wrap justify-center gap-4">

@@ -16,14 +16,14 @@ export const profile = {
     "/avatar.png",
 
   /** Short punchy headline shown in the About Summary on the home page */
-  headline: "Building software that makes a difference — one commit at a time.",
+  headline: "Full-Stack Developer specializing in ERP backend solutions, Odoo engineering, and enterprise integrations.",
 
   /** Multi-line bio shown in the full About page */
   bio: [
-    "I'm a **Full-Stack Developer** with 5+ years of experience building ERP backends, integration services, and scalable business applications.",
+    "I'm a **Full-Stack Developer** with 4+ years of experience building ERP backends, integration services, and scalable business applications.",
     "Specialized in **Odoo development**, crafting custom modules, integrations, and automation workflows that transform business operations.",
     "Passionate about **clean architecture**, performance optimization, and designing reliable backend systems for real operational workflows.",
-    "When not coding, I contribute to **open source**, explore new tech stacks, and mentor junior developers in the community.",
+    "When I'm not coding, you can find me exploring the latest tech trends, contributing to open-source projects, or sharing insights on my blog.",
   ],
 
   /** Rotating job titles in the hero typing animation */

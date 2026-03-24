@@ -13,6 +13,10 @@ const highlights = [
 
 export default function AboutSummary() {
   const { ref, inView } = useInView({ threshold: 0.15, triggerOnce: true });
+  const aboutSummaryEnd = profile.bio.findIndex((line) =>
+    line.includes("Specialized in **Odoo development**")
+  );
+  const aboutSummaryLines = aboutSummaryEnd === -1 ? profile.bio : profile.bio.slice(0, aboutSummaryEnd + 1);
 
   return (
     <section className="relative py-24 overflow-hidden">
@@ -24,7 +28,17 @@ export default function AboutSummary() {
         {/* ── Section label ── */}
         <motion.div initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }} className="text-center mb-14">
-          <div className="font-mono text-xs text-neon-purple/60 tracking-[0.4em] mb-3 uppercase">// About Me</div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}>
+            <div className="inline-flex items-center gap-2 mb-4 px-4 py-1.5 rounded-full border border-neon-purple/20 bg-neon-purple/5">
+              <span className="w-1.5 h-1.5 rounded-full bg-neon-purple animate-pulse" />
+              <span className="font-mono text-[11px] text-neon-purple/80 tracking-[0.3em] uppercase">
+                ABOUT ME
+              </span>
+            </div>
+          </motion.div>
           <h2 className="font-display text-3xl sm:text-4xl font-bold gradient-text leading-tight">
             Crafting ERP
             <br />
@@ -51,21 +65,16 @@ export default function AboutSummary() {
                 <div className="font-mono text-xs text-slate-500 ml-2">about_summary.md</div>
               </div>
               <div className="font-mono text-sm space-y-4 text-slate-400 leading-relaxed">
-                <p>
-                  <span className="text-neon-cyan">{">"}</span> I&apos;m a{" "}
-                  <span className="text-neon-purple font-semibold">Full-Stack Developer</span> with 5+ years of
-                  experience building ERP backends, integrations, and scalable business systems.
-                </p>
-                <p>
-                  <span className="text-neon-cyan">{">"}</span> Specialized in{" "}
-                  <span className="text-neon-cyan font-semibold">Odoo development</span>, crafting custom modules
-                  and automation workflows that transform business operations.
-                </p>
-                <p>
-                  <span className="text-neon-cyan">{">"}</span> Passionate about{" "}
-                  <span className="text-neon-purple font-semibold">clean architecture</span>, performance
-                  optimization, and resilient backend systems teams can rely on.
-                </p>
+                {aboutSummaryLines.map((line, i) => (
+                  <p key={i}>
+                    <span className="text-neon-cyan">{">"}</span>{" "}
+                    <span dangerouslySetInnerHTML={{
+                      __html: line.replace(/\*\*(.+?)\*\*/g, (_, t) =>
+                        `<span class="font-semibold" style="color:${i % 2 === 0 ? "var(--neon-purple)" : "var(--neon-cyan)"}">${t}</span>`
+                      ),
+                    }} />
+                  </p>
+                ))}
               </div>
             </div>
 

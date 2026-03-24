@@ -10,7 +10,7 @@ export default function AboutSection({ showHeader = false }: { showHeader?: bool
 
   return (
     <section className="relative py-16 lg:py-24 overflow-hidden">
-      <div className="absolute inset-0 bg-dark-800/50" />
+      <div className="absolute inset-0 bg-dark-800" />
       <div className="absolute inset-0 grid-bg opacity-10" />
       <div className="absolute top-0 left-1/4 right-1/4 h-px bg-gradient-to-r from-transparent via-neon-purple to-transparent" />
 
@@ -53,7 +53,11 @@ export default function AboutSection({ showHeader = false }: { showHeader?: bool
 
             {/* Skill badges */}
             <div>
-              <div className="font-mono text-xs text-slate-500 tracking-widest mb-4 uppercase">// Technologies</div>
+              <div className="font-mono text-xs text-slate-500 tracking-widest mb-4 uppercase">
+                <span className="font-mono text-xs tracking-widest uppercase flex-shrink-0 text-[24px] font-bold gradient-text">
+                  // Technologies
+                </span>
+              </div>
               <div className="flex flex-wrap gap-2">
                 {allSkillBadges.map((badge, i) => (
                   <motion.span key={badge}
@@ -72,7 +76,11 @@ export default function AboutSection({ showHeader = false }: { showHeader?: bool
           {/* Skill bars + Quick info */}
           <motion.div initial={{ opacity: 0, x: 40 }} animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.2 }}>
-            <div className="font-mono text-xs text-slate-500 tracking-widest mb-6 uppercase">// Core Competencies</div>
+            <div className="font-mono text-xs text-slate-500 tracking-widest mb-6 uppercase">
+              <span className="font-mono text-xs tracking-widest uppercase flex-shrink-0 text-[24px] font-bold gradient-text">
+                // Core Competencies
+              </span>
+            </div>
             <div className="space-y-6">
               {skillBars.map((skill, i) => (
                 <div key={skill.name}>
