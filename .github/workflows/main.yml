@@ -26,7 +26,8 @@ jobs:
             git pull origin main
             npm install
             npm run build
-            pm2 restart portfolio_cms_nextjs || pm2 start npm --name "portfolio_cms_nextjs" -- start
+            pm2 start ecosystem.config.js
+            pm2 save
             echo "✅ Deployment completed!"
 
       - name: Send Email (Success)
