@@ -1,0 +1,76 @@
+name: Deploy to VPS
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: Deploy via SSH
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Deploy to VPS
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.VPS_SSH_KEY }}
+          port: ${{ secrets.VPS_PORT }}
+          script: |
+            cd /opt/lema-catalog-nextjs
+            git pull origin main
+            npm install
+            npm run build
+            pm2 restart lema-catalog-nextjs || pm2 start npm --name "lema-catalog-nextjs" -- start
+            echo "✅ Deployment completed!"
+
+      - name: Send Email (Success)
+        if: success()
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          to: ${{ secrets.MAIL_TO }}
+          from: GitHub Actions <${{ secrets.MAIL_USERNAME }}>
+          subject: "✅ Deploy Completed - lema-catalog-nextjs"
+          body: |
+            Deploy completed! 🎉
+
+            Details:
+            - Project  : lema-catalog-nextjs
+            - Branch   : ${{ github.ref_name }}
+            - Commit   : ${{ github.event.commits[0].message }}
+            - Author   : ${{ github.actor }}
+            - Date     : ${{ github.event.head_commit.timestamp }}
+
+            See Details: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
+      - name: Send Email (Failed)
+        if: failure()
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          to: ${{ secrets.MAIL_TO }}
+          from: GitHub Actions <${{ secrets.MAIL_USERNAME }}>
+          subject: "❌ Deploy Failed - lema-catalog-nextjs"
+          body: |
+            Deploy failed! ⚠️
+
+            Details:
+            - Project  : lema-catalog-nextjs
+            - Branch   : ${{ github.ref_name }}
+            - Commit   : ${{ github.event.commits[0].message }}
+            - Author   : ${{ github.actor }}
+            - Date     : ${{ github.event.head_commit.timestamp }}
+
+            Check Error: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
