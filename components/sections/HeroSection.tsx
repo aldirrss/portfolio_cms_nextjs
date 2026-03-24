@@ -93,9 +93,9 @@ export default function HeroSection() {
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0 bg-dark-900" />
-      <div className="absolute inset-0 grid-bg opacity-20" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full opacity-10"
+      <div className="hero-base-bg absolute inset-0 bg-dark-900" />
+      <div className="hero-grid absolute inset-0 grid-bg opacity-20" />
+      <div className="hero-orb absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full opacity-10"
         style={{ background: "radial-gradient(circle, rgba(191,0,255,0.4) 0%, rgba(0,128,255,0.2) 40%, transparent 70%)" }} />
       <canvas ref={canvasRef} id="particle-canvas" className="absolute inset-0" />
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -107,7 +107,7 @@ export default function HeroSection() {
         <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
 
           {/* ── Text column ── */}
-          <div className="flex-1 text-center lg:text-left">
+          <div className="order-2 lg:order-1 flex-1 text-center lg:text-left">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
               <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 rounded-full border border-neon-cyan/20 bg-neon-cyan/5">
                 <span className="w-2 h-2 rounded-full bg-neon-cyan animate-pulse" />
@@ -185,7 +185,7 @@ export default function HeroSection() {
           {/* ── Profile image ── */}
           <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2, type: "spring" }}
-            className="relative flex-shrink-0">
+            className="order-1 lg:order-2 relative flex-shrink-0">
             <div className="relative w-64 h-64 sm:w-80 sm:h-80">
               <div className="absolute -inset-4 rounded-full border border-neon-purple/20 animate-pulse-slow" />
               <div className="absolute -inset-8 rounded-full border border-neon-cyan/10"

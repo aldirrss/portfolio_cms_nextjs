@@ -41,7 +41,7 @@
 }
 
 .light {
-  --neon-purple: #7c3aed;
+  --neon-purple: #5b21b6;
   --neon-blue: #2563eb;
   --neon-cyan: #0f766e;
   --neon-pink: #be185d;
@@ -392,6 +392,121 @@ body {
 .light .tech-card:hover { background: rgba(37, 99, 235, 0.08); border-color: rgba(37, 99, 235, 0.34); }
 .light footer { border-top-color: rgba(30, 64, 175, 0.12); background-color: var(--dark-800); }
 .light .typing-cursor { background: var(--neon-purple); }
+
+/* Light theme accent clarity */
+.light .text-neon-purple {
+  color: var(--neon-purple) !important;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.65), 0 8px 24px rgba(91, 33, 182, 0.18);
+}
+
+.light .text-neon-purple\/60 { color: color-mix(in srgb, var(--neon-purple) 78%, #0f172a) !important; }
+.light .text-neon-purple\/70 { color: color-mix(in srgb, var(--neon-purple) 84%, #0f172a) !important; }
+.light .text-neon-purple\/80 { color: color-mix(in srgb, var(--neon-purple) 90%, #0f172a) !important; }
+.light .text-neon-purple\/50 { color: color-mix(in srgb, var(--neon-purple) 68%, #0f172a) !important; }
+.light .text-neon-cyan\/60 { color: color-mix(in srgb, var(--neon-cyan) 70%, #0f172a) !important; }
+.light .text-neon-cyan\/70 { color: color-mix(in srgb, var(--neon-cyan) 78%, #0f172a) !important; }
+.light .text-neon-cyan\/80 { color: color-mix(in srgb, var(--neon-cyan) 86%, #0f172a) !important; }
+
+.light .gradient-text {
+  background: linear-gradient(135deg, #4c1d95 0%, #0f766e 54%, #1d4ed8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Hero background refinement for light mode */
+.light .hero-base-bg {
+  background:
+    radial-gradient(1100px 520px at 8% -12%, rgba(91, 33, 182, 0.16), transparent 58%),
+    radial-gradient(760px 440px at 92% 8%, rgba(29, 78, 216, 0.14), transparent 62%),
+    linear-gradient(160deg, #f8fbff 0%, #f1f6ff 44%, #e9f0fe 100%) !important;
+}
+
+.light .hero-grid {
+  opacity: 0.34;
+  background-image:
+    linear-gradient(rgba(37, 99, 235, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(37, 99, 235, 0.08) 1px, transparent 1px);
+}
+
+.light .hero-orb {
+  opacity: 0.28;
+  filter: blur(1px);
+  background:
+    radial-gradient(circle, rgba(76, 29, 149, 0.22) 0%, rgba(29, 78, 216, 0.16) 42%, transparent 72%) !important;
+}
+
+.light .scan-line {
+  opacity: 0.1;
+  background: linear-gradient(90deg, transparent, rgba(29, 78, 216, 0.45), transparent);
+}
+
+/* Full-page light mode continuity for section backgrounds */
+.light .bg-dark-900 {
+  background:
+    radial-gradient(800px 380px at 0% -6%, rgba(91, 33, 182, 0.09), transparent 62%),
+    linear-gradient(170deg, #f9fbff 0%, #f2f6ff 50%, #ecf2ff 100%) !important;
+}
+
+.light .bg-dark-800 {
+  background:
+    radial-gradient(700px 340px at 100% 0%, rgba(29, 78, 216, 0.08), transparent 60%),
+    linear-gradient(165deg, #f6faff 0%, #eef4ff 55%, #e9f0fe 100%) !important;
+}
+
+.light .bg-dark-700 {
+  background: linear-gradient(160deg, #edf4ff 0%, #e7effd 100%) !important;
+}
+
+.light .bg-dark-800\/90 {
+  background: color-mix(in srgb, #ffffff 88%, #e8f0ff) !important;
+}
+
+.light .bg-dark-800\/50 {
+  background: color-mix(in srgb, #ffffff 72%, #e8f0ff) !important;
+}
+
+.light .bg-dark-800\/40 {
+  background: color-mix(in srgb, #ffffff 68%, #e8f0ff) !important;
+}
+
+/* Better neon accents on light for interactive chips/buttons */
+.light .border-neon-purple\/40 { border-color: color-mix(in srgb, var(--neon-purple) 52%, transparent) !important; }
+.light .border-neon-purple\/60 { border-color: color-mix(in srgb, var(--neon-purple) 74%, transparent) !important; }
+.light .border-neon-cyan\/40 { border-color: color-mix(in srgb, var(--neon-cyan) 55%, transparent) !important; }
+.light .border-neon-purple\/10 { border-color: color-mix(in srgb, var(--neon-purple) 22%, transparent) !important; }
+.light .border-neon-purple\/20 { border-color: color-mix(in srgb, var(--neon-purple) 34%, transparent) !important; }
+.light .border-neon-purple\/30 { border-color: color-mix(in srgb, var(--neon-purple) 44%, transparent) !important; }
+.light .border-neon-purple\/50 { border-color: color-mix(in srgb, var(--neon-purple) 62%, transparent) !important; }
+.light .border-neon-cyan\/10 { border-color: color-mix(in srgb, var(--neon-cyan) 22%, transparent) !important; }
+.light .border-neon-cyan\/20 { border-color: color-mix(in srgb, var(--neon-cyan) 34%, transparent) !important; }
+.light .border-neon-cyan\/30 { border-color: color-mix(in srgb, var(--neon-cyan) 45%, transparent) !important; }
+.light .border-neon-cyan\/50 { border-color: color-mix(in srgb, var(--neon-cyan) 64%, transparent) !important; }
+.light .border-neon-cyan\/60 { border-color: color-mix(in srgb, var(--neon-cyan) 74%, transparent) !important; }
+
+.light .bg-neon-purple\/5 { background-color: color-mix(in srgb, var(--neon-purple) 10%, white) !important; }
+.light .bg-neon-purple\/10 { background-color: color-mix(in srgb, var(--neon-purple) 14%, white) !important; }
+.light .bg-neon-purple\/20 { background-color: color-mix(in srgb, var(--neon-purple) 20%, white) !important; }
+.light .bg-neon-cyan\/5 { background-color: color-mix(in srgb, var(--neon-cyan) 10%, white) !important; }
+.light .bg-neon-cyan\/10 { background-color: color-mix(in srgb, var(--neon-cyan) 14%, white) !important; }
+.light .bg-neon-cyan\/20 { background-color: color-mix(in srgb, var(--neon-cyan) 20%, white) !important; }
+
+.light .hover\:bg-neon-purple\/10:hover { background-color: color-mix(in srgb, var(--neon-purple) 16%, white) !important; }
+.light .hover\:bg-neon-cyan\/10:hover { background-color: color-mix(in srgb, var(--neon-cyan) 16%, white) !important; }
+.light .hover\:bg-neon-cyan\/5:hover { background-color: color-mix(in srgb, var(--neon-cyan) 11%, white) !important; }
+
+.light .text-neon-cyan {
+  color: color-mix(in srgb, var(--neon-cyan) 80%, #0f172a) !important;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.72), 0 8px 24px rgba(15, 118, 110, 0.14);
+}
+
+.light .btn-primary {
+  box-shadow: 0 10px 26px rgba(76, 29, 149, 0.18), 0 2px 10px rgba(29, 78, 216, 0.14);
+}
+
+.light .btn-primary:hover {
+  box-shadow: 0 14px 34px rgba(76, 29, 149, 0.26), 0 4px 16px rgba(29, 78, 216, 0.22);
+}
 
 .dark .text-white { color: var(--text-strong) !important; }
 .dark .text-slate-100 { color: var(--text-strong) !important; }
