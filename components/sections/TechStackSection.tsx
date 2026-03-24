@@ -132,7 +132,7 @@ export default function TechStackSection({ showHeader = false }: { showHeader?: 
           transition={{ delay: 0.9 }}
           className="flex justify-center mt-14 gap-3 flex-wrap"
         >
-          {["React Expert", "Odoo Certified", "Full Stack", "5+ Years"].map((tag) => (
+          {["Odoo Engineer", "ERP Backend", "Full-Stack Developer", "5+ Years"].map((tag) => (
             <div
               key={tag}
               className="px-4 py-1.5 rounded-full font-mono text-xs

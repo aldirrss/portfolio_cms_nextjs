@@ -15,7 +15,7 @@ function TimelineCard({ exp }: { exp: Experience }) {
         </div>
         <div className="text-right flex-shrink-0">
           <div className="font-mono text-xs text-slate-400">{exp.period}</div>
-          <div className="font-mono text-[10px] mt-1 px-2 py-0.5 rounded"
+          <div className="font-mono text-[10px] mt-1 px-2 py-0.5 rounded font-semibold inline-block"
             style={{ color: exp.color, background: `${exp.color}10`, border: `1px solid ${exp.color}25` }}>
             {exp.type}
           </div>
@@ -41,7 +41,7 @@ function TimelineItem({ exp, index, inView }: { exp: Experience; index: number; 
       {/* Left pane */}
       <motion.div initial={{ opacity: 0, x: isLeft ? -40 : 0 }} animate={inView ? { opacity: 1, x: 0 } : {}}
         transition={{ duration: 0.6, delay: index * 0.1 }}
-        className={isLeft ? "md:col-start-1" : "md:col-start-2 md:row-start-1"}>
+        className={`${isLeft ? "md:col-start-1" : "md:col-start-2 md:row-start-1"} hidden md:block`}>
         {isLeft
           ? <div className="glass-card p-6 hover-glow md:mr-8"><TimelineCard exp={exp} /></div>
           : <div className="hidden md:block" />}
@@ -60,7 +60,7 @@ function TimelineItem({ exp, index, inView }: { exp: Experience; index: number; 
       {/* Right pane */}
       <motion.div initial={{ opacity: 0, x: !isLeft ? 40 : 0 }} animate={inView ? { opacity: 1, x: 0 } : {}}
         transition={{ duration: 0.6, delay: index * 0.1 }}
-        className={!isLeft ? "md:col-start-2" : "md:col-start-1 md:row-start-1"}>
+        className={`${!isLeft ? "md:col-start-2" : "md:col-start-1 md:row-start-1"} hidden md:block`}>
         {!isLeft
           ? <div className="glass-card p-6 hover-glow md:ml-8"><TimelineCard exp={exp} /></div>
           : <div className="hidden md:block" />}
@@ -79,7 +79,7 @@ function TimelineItem({ exp, index, inView }: { exp: Experience; index: number; 
 
 export default function ExperienceSection({ showHeader = false }: { showHeader?: boolean }) {
   const { ref, inView } = useInView({ threshold: 0.05, triggerOnce: true });
-  const sorted = [...experiences].sort((a, b) => a.order - b.order);
+  const sorted = [...experiences].sort((a, b) => b.order - a.order);
 
   return (
     <section className="relative py-16 lg:py-24 overflow-hidden">
@@ -110,8 +110,11 @@ export default function ExperienceSection({ showHeader = false }: { showHeader?:
         {/* Education */}
         <motion.div initial={{ opacity: 0, y: 30 }} animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.6 }} className="mt-16">
-          <div className="font-mono text-xs text-slate-500 tracking-widest mb-6 uppercase text-center">
-            // Education
+          <div className="text-slate-500 tracking-widest mb-6 uppercase text-center">
+            <span className="font-mono text-xs tracking-widest uppercase flex-shrink-0 text-[24px] font-bold"
+              style={{ color: "#00ffff" }}>
+              Education
+            </span>
           </div>
           <div className="flex flex-wrap justify-center gap-4">
             {[...education].sort((a, b) => a.order - b.order).map((edu) => (

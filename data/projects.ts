@@ -130,7 +130,7 @@ export function getFeaturedProjects(limit = 3): Project[] {
 
 export const projectCategories = [
   { id: "all",       label: "All" },
-  { id: "fullstack", label: "Fullstack" },
+  { id: "fullstack", label: "Full-Stack" },
   { id: "odoo",      label: "Odoo" },
   { id: "ai",        label: "AI/ML" },
 ] as const;

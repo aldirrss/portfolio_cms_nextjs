@@ -19,10 +19,10 @@ export const services: Service[] = [
     id: "fullstack",
     order: 1,
     icon: "⚡",
-    title: "Fullstack Web Development",
+    title: "Full-Stack ERP Development",
     description:
-      "End-to-end web applications built with Next.js, React, and Node.js. From pixel-perfect UIs to robust APIs, I deliver complete, production-ready solutions.",
-    tags: ["Next.js", "React", "Node.js", "REST / GraphQL"],
+      "End-to-end ERP and business platforms built with Python, Node.js, and robust API architecture. From workflow modeling to secure backend services, I deliver production-ready solutions.",
+    tags: ["Python", "Node.js", "PostgreSQL", "REST / GraphQL"],
     color: "#00ffff",
   },
   {
@@ -69,10 +69,10 @@ export const services: Service[] = [
     id: "ui",
     order: 6,
     icon: "🎨",
-    title: "UI/UX Implementation",
+    title: "ERP Interface Engineering",
     description:
-      "Translating Figma designs into pixel-perfect, animated, and fully responsive interfaces. Tailwind CSS, Framer Motion, and accessibility-first.",
-    tags: ["Tailwind CSS", "Framer Motion", "Figma", "a11y"],
+      "Building clean, functional ERP interfaces for dashboards, operational workflows, and approval pipelines with usability and speed in mind.",
+    tags: ["Odoo Views", "QWeb/OWL", "Workflow UX", "a11y"],
     color: "#bf00ff",
   },
 ];

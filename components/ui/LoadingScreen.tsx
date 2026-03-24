@@ -67,7 +67,7 @@ export default function LoadingScreen() {
         >
           <div className="w-20 h-20 rounded-2xl border border-neon-purple/50 flex items-center justify-center bg-dark-800"
             style={{ boxShadow: "0 0 30px rgba(191,0,255,0.4), 0 0 60px rgba(0,255,255,0.1)" }}>
-            <span className="font-display text-3xl font-black gradient-text">AC</span>
+            <span className="font-display text-3xl font-black gradient-text">AL</span>
           </div>
           <div className="absolute -inset-1 rounded-2xl border border-neon-cyan/20 animate-pulse" />
         </motion.div>

@@ -5,20 +5,20 @@ import RootShell from "@/components/layout/RootShell";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://aldi.lemacore.com"),
-  title: { default: "Aldi Rosid | Fullstack & Odoo Developer", template: "%s | Aldi Rosid" },
+  title: { default: "Aldi Rosid | Full-Stack & Odoo Engineer", template: "%s | Aldi Rosid" },
   description:
-    "Portfolio of Aldi Rosid — Fullstack Developer specializing in Next.js, React, Odoo, and modern web technologies.",
-  keywords: ["fullstack developer", "odoo developer", "react", "nextjs", "typescript", "portfolio"],
+    "Portfolio of Aldi Rosid — Full-Stack Developer specializing in ERP backend solutions, Odoo engineering, and enterprise integrations.",
+  keywords: ["full-stack developer", "odoo developer", "odoo engineer", "erp backend", "python", "portfolio"],
   authors: [{ name: "Aldi Rosid" }],
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://aldi.lemacore.com",
     siteName: "Aldi Rosid Portfolio",
-    title: "Aldi Rosid | Fullstack & Odoo Developer",
-    description: "Building cutting-edge digital experiences with modern web technologies.",
+    title: "Aldi Rosid | Full-Stack & Odoo Engineer",
+    description: "Building robust ERP backend solutions with Odoo, Python, and scalable integration architecture.",
   },
-  twitter: { card: "summary_large_image", title: "Aldi Rosid | Fullstack & Odoo Developer" },
+  twitter: { card: "summary_large_image", title: "Aldi Rosid | Full-Stack & Odoo Engineer" },
   robots: { index: true, follow: true },
 };
 

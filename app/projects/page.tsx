@@ -4,7 +4,7 @@ import ProjectsSection from "@/components/sections/ProjectsSection";
 
 export const metadata: Metadata = {
   title: "Projects",
-  description: "A showcase of web applications, Odoo modules, and open-source tools built by Aldi Rosid.",
+  description: "A showcase of ERP backends, Odoo modules, integration systems, and open-source tools built by Aldi Rosid.",
 };
 
 export default function ProjectsPage() {
@@ -13,7 +13,7 @@ export default function ProjectsPage() {
       <PageHeader
         eyebrow="Portfolio"
         title="All Projects"
-        subtitle="A curated selection of web applications, ERP customizations, and open-source work I've built over the years."
+        subtitle="A curated selection of ERP backend solutions, Odoo customizations, and integration projects I've built over the years."
       />
       <ProjectsSection />
     </>

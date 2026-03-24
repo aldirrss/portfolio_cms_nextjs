@@ -7,7 +7,7 @@
 export const profile = {
   name: "Aldi Rosid",
   initials: "AL",
-  role: "Fullstack & Odoo Developer",
+  role: "Full-Stack Developer & Odoo Engineer",
   location: "Jakarta, Indonesia",
   timezone: "WIB (UTC+7)",
   email: "aldi@lemacore.com",
@@ -20,9 +20,9 @@ export const profile = {
 
   /** Multi-line bio shown in the full About page */
   bio: [
-    "I'm a **Fullstack Developer** with 5+ years of experience building scalable web applications and ERP systems.",
+    "I'm a **Full-Stack Developer** with 5+ years of experience building ERP backends, integration services, and scalable business applications.",
     "Specialized in **Odoo development**, crafting custom modules, integrations, and automation workflows that transform business operations.",
-    "Passionate about **clean architecture**, performance optimization, and building interfaces that users actually love.",
+    "Passionate about **clean architecture**, performance optimization, and designing reliable backend systems for real operational workflows.",
     "When not coding, I contribute to **open source**, explore new tech stacks, and mentor junior developers in the community.",
   ],
 
@@ -30,13 +30,13 @@ export const profile = {
   typingRoles: [
     "Odoo Developer",
     2000,
-    "Fullstack Developer",
+    "Full-Stack Developer",
     2000,
-    "Business Analyst System",
+    "ERP Backend Engineer",
     2000,
-    "Odoo Software Engineer",
+    "Odoo Engineer",
     2000,
-    "React / Next.js Expert",
+    "System Integration Specialist",
     2000,
     "DevOps",
     2000,
@@ -56,7 +56,7 @@ export const profile = {
   ],
 
   /** Top skill badges shown on the home About summary */
-  featuredBadges: ["React", "Next.js", "Odoo", "TypeScript", "PostgreSQL", "Docker"],
+  featuredBadges: ["Odoo", "Python", "PostgreSQL", "ERP Integration", "API Automation", "Docker"],
 
   socials: [
     {

@@ -26,9 +26,9 @@ export default function AboutSummary() {
           transition={{ duration: 0.5 }} className="text-center mb-14">
           <div className="font-mono text-xs text-neon-purple/60 tracking-[0.4em] mb-3 uppercase">// About Me</div>
           <h2 className="font-display text-3xl sm:text-4xl font-bold gradient-text leading-tight">
-            Crafting Digital
+            Crafting ERP
             <br />
-            <span className="text-white dark:text-white">Experiences</span>
+            <span className="text-white dark:text-white">Solutions</span>
           </h2>
           {/* Updated headline / quote */}
           <p className="mt-5 font-mono text-sm italic text-neon-cyan/70 max-w-lg mx-auto leading-relaxed">
@@ -53,8 +53,8 @@ export default function AboutSummary() {
               <div className="font-mono text-sm space-y-4 text-slate-400 leading-relaxed">
                 <p>
                   <span className="text-neon-cyan">{">"}</span> I&apos;m a{" "}
-                  <span className="text-neon-purple font-semibold">Fullstack Developer</span> with 5+ years of
-                  experience building scalable web applications and ERP systems.
+                  <span className="text-neon-purple font-semibold">Full-Stack Developer</span> with 5+ years of
+                  experience building ERP backends, integrations, and scalable business systems.
                 </p>
                 <p>
                   <span className="text-neon-cyan">{">"}</span> Specialized in{" "}
@@ -64,7 +64,7 @@ export default function AboutSummary() {
                 <p>
                   <span className="text-neon-cyan">{">"}</span> Passionate about{" "}
                   <span className="text-neon-purple font-semibold">clean architecture</span>, performance
-                  optimization, and interfaces users actually love.
+                  optimization, and resilient backend systems teams can rely on.
                 </p>
               </div>
             </div>

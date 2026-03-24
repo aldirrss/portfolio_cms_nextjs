@@ -77,7 +77,7 @@ export default function Navbar({ onCmdOpen }: { onCmdOpen?: () => void }) {
             <Link href="/" className="flex items-center gap-2" data-hover>
               <motion.div whileHover={{ scale: 1.05 }} className="flex items-center gap-2">
                 <div className="w-9 h-9 rounded-lg flex items-center justify-center bg-dark-800 border border-neon-purple/40" style={{ boxShadow: "0 0 15px rgba(191,0,255,0.3)" }}>
-                  <span className="font-display text-sm font-bold gradient-text">AC</span>
+                  <span className="font-display text-sm font-bold gradient-text">AL</span>
                 </div>
                 <span className="font-display text-sm font-semibold gradient-text hidden sm:block tracking-wider">ALDI ROSID</span>
               </motion.div>

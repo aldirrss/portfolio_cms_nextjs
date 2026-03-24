@@ -56,7 +56,7 @@ export const techStack: TechCategory[] = [
   },
   {
     id: "frontend",
-    category: "Frontend",
+    category: "Application Layer",
     color: "#00ffff",
     order: 2,
     techs: [
@@ -110,9 +110,9 @@ export const techStack: TechCategory[] = [
 
 /** Flat list of all skills (for About page badge cloud) */
 export const allSkillBadges: string[] = [
-  "React", "Next.js", "TypeScript", "Python", "Odoo", "Node.js",
-  "PostgreSQL", "Docker", "Redis", "GraphQL", "REST API", "Git",
-  "Linux", "Nginx", "AWS", "Figma",
+  "Odoo", "Python", "Node.js", "PostgreSQL", "REST API", "GraphQL",
+  "Docker", "Redis", "Integration", "Automation", "Git", "Linux",
+  "Nginx", "AWS", "Figma",
 ];
 
 /** Animated skill bars shown on the About page */
@@ -123,10 +123,10 @@ export interface SkillBar {
 }
 
 export const skillBars: SkillBar[] = [
-  { name: "React / Next.js",    level: 95, color: "#00ffff" },
-  { name: "TypeScript",         level: 90, color: "#bf00ff" },
-  { name: "Odoo / Python",      level: 88, color: "#0080ff" },
-  { name: "Node.js / Express",  level: 85, color: "#00ffff" },
-  { name: "PostgreSQL",         level: 82, color: "#bf00ff" },
-  { name: "Docker / DevOps",    level: 78, color: "#0080ff" },
+  { name: "Odoo / Python",          level: 95, color: "#00ffff" },
+  { name: "ERP Backend Architecture", level: 92, color: "#bf00ff" },
+  { name: "System Integration",     level: 90, color: "#0080ff" },
+  { name: "Node.js / API Services", level: 86, color: "#00ffff" },
+  { name: "PostgreSQL",             level: 84, color: "#bf00ff" },
+  { name: "Docker / DevOps",        level: 80, color: "#0080ff" },
 ];

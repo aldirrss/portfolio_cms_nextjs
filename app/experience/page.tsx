@@ -13,7 +13,7 @@ export default function ExperiencePage() {
       <PageHeader
         eyebrow="Career"
         title="Experience"
-        subtitle="My professional journey — from freelance web developer to senior fullstack engineer and Odoo consultant."
+        subtitle="A timeline of my professional journey, showcasing the roles I've held, companies I've worked with, and the impact I've made in the software development industry."
       />
       <ExperienceSection />
     </>

@@ -40,8 +40,8 @@ export default function ContactCTA() {
           </h2>
 
           <p className="font-mono text-sm text-slate-400 leading-relaxed max-w-xl mx-auto mb-10">
-            Whether it&apos;s a new web application, an Odoo customization, or a complex integration —
-            I&apos;d love to hear about it. Let&apos;s turn your vision into reality.
+            Whether it&apos;s an ERP backend initiative, an Odoo customization, or a complex integration flow —
+            I&apos;d love to hear about it. Let&apos;s turn your business requirements into reliable software.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-14">

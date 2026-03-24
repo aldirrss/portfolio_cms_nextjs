@@ -4,7 +4,7 @@ import AboutSection from "@/components/sections/AboutSection";
 
 export const metadata: Metadata = {
   title: "About",
-  description: "Learn about Aldi Rosid — Fullstack & Odoo Developer with 5+ years of experience building scalable web applications and ERP systems.",
+  description: "Learn about Aldi Rosid — Full-Stack Developer and Odoo Engineer with 5+ years of experience delivering ERP backend solutions.",
 };
 
 export default function AboutPage() {
@@ -13,7 +13,7 @@ export default function AboutPage() {
       <PageHeader
         eyebrow="About Me"
         title="Who I Am"
-        subtitle="A fullstack developer passionate about clean architecture, performance, and building things users actually love."
+        subtitle="A Full-Stack Developer focused on ERP backend architecture, Odoo engineering, and reliable enterprise systems."
       />
       <AboutSection />
     </>

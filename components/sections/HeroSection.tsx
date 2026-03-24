@@ -139,8 +139,8 @@ export default function HeroSection() {
             <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               className="text-slate-400 text-base leading-relaxed max-w-lg mb-10 mx-auto lg:mx-0">
-              Building <span className="text-neon-cyan">scalable</span>, high-performance digital experiences
-              with modern web technologies. Passionate about clean code and{" "}
+              Building <span className="text-neon-cyan">scalable</span> ERP backends, integration flows,
+              and business-critical systems. Passionate about clean code and{" "}
               <span className="text-neon-purple">elegant solutions</span>.
             </motion.p>
 

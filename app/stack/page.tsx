@@ -4,7 +4,7 @@ import TechStackSection from "@/components/sections/TechStackSection";
 
 export const metadata: Metadata = {
   title: "Tech Stack",
-  description: "The technologies, tools, and frameworks Aldi Rosid uses to build exceptional digital experiences.",
+  description: "The technologies, tools, and frameworks Aldi Rosid uses to build ERP backend and Odoo solutions.",
 };
 
 export default function StackPage() {
@@ -13,7 +13,7 @@ export default function StackPage() {
       <PageHeader
         eyebrow="Tech Stack"
         title="My Toolkit"
-        subtitle="Tools and technologies I rely on every day to build fast, scalable, and maintainable software."
+        subtitle="Tools and technologies I rely on every day to build scalable ERP backends, integrations, and maintainable software."
       />
       <TechStackSection />
     </>
