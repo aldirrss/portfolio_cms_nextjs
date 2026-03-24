@@ -21,8 +21,5 @@ const nextConfig = {
     dangerouslyAllowSVG: true,
     unoptimized: process.env.NODE_ENV === 'development', // Disable optimization in development
   },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
 };
-export default nextConfig;
+module.exports = nextConfig;
