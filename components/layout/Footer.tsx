@@ -34,8 +34,8 @@ export default function Footer() {
           {/* Built with + back to top */}
           <div className="flex items-center gap-4">
             <span className="font-mono text-xs text-slate-600 hidden sm:block">
-              Built with <span className="text-neon-cyan">Next.js</span> +{" "}
-              <span className="text-neon-purple">Framer Motion</span>
+              Powered by <span className="text-neon-cyan">Lema Core</span>{" "}
+              <span className="text-neon-purple font-bold">Technologies</span>
             </span>
             <motion.button
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}

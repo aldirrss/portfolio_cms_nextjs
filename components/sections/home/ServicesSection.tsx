@@ -15,7 +15,17 @@ export default function ServicesSection() {
       <div ref={ref} className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div initial={{ opacity: 0, y: 30 }} animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }} className="text-center mb-16">
-          <div className="font-mono text-xs text-neon-cyan/60 tracking-[0.4em] mb-3 uppercase">// Services</div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}>
+            <div className="inline-flex items-center gap-2 mb-4 px-4 py-1.5 rounded-full border border-neon-cyan/20 bg-neon-cyan/5">
+              <span className="w-1.5 h-1.5 rounded-full bg-neon-cyan animate-pulse" />
+              <span className="font-mono text-[11px] text-neon-cyan/80 tracking-[0.3em] uppercase">
+                SERVICES
+              </span>
+            </div>
+          </motion.div>
           <h2 className="font-display text-3xl sm:text-4xl font-bold gradient-text mb-4">What I Do</h2>
           <div className="mt-3 mx-auto w-16 h-0.5 bg-gradient-to-r from-neon-cyan to-neon-purple" />
           <p className="mt-5 text-slate-400 font-mono text-sm max-w-xl mx-auto">

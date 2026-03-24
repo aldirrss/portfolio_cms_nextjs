@@ -26,21 +26,29 @@ export default function FeaturedProjects() {
           className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-12"
         >
           <div>
-            <div className="font-mono text-xs text-neon-purple/60 tracking-[0.4em] mb-3 uppercase">
-              // Featured Projects
-            </div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}>
+              <div className="inline-flex items-center gap-2 mb-4 px-4 py-1.5 rounded-full border border-neon-blue/20 bg-neon-blue/5">
+                <span className="w-1.5 h-1.5 rounded-full bg-neon-blue animate-pulse" />
+                <span className="font-mono text-[11px] text-neon-blue/80 tracking-[0.3em] uppercase">
+                  Featured Projects
+                </span>
+              </div>
+            </motion.div>
             <h2 className="font-display text-3xl sm:text-4xl font-bold gradient-text">
               Selected Work
             </h2>
           </div>
-          <Link href="/projects" data-hover>
+          {/* <Link href="/projects" data-hover>
             <motion.span
               whileHover={{ scale: 1.03 }}
               className="btn-secondary inline-flex items-center gap-2 text-sm"
             >
               See All Projects →
             </motion.span>
-          </Link>
+          </Link> */}
         </motion.div>
 
         {/* Cards */}
@@ -69,6 +77,10 @@ export default function FeaturedProjects() {
                   style={{ background: `linear-gradient(to bottom, ${project.color}10, rgba(13,20,36,0.85))` }}
                 />
                 <div className="absolute inset-0 flex items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <Link href={`/projects/${project.slug}`} data-hover
+                    className="px-3 py-1.5 rounded-lg font-mono text-xs bg-dark-800/90 border border-neon-blue/40 text-neon-blue hover:bg-neon-blue/10 transition-all">
+                    ◎ Details
+                  </Link>
                   <a href={project.liveUrl} target="_blank" rel="noopener noreferrer"
                     className="px-3 py-1.5 rounded-lg font-mono text-xs bg-dark-800/90 border border-neon-cyan/40 text-neon-cyan hover:bg-neon-cyan/10 transition-all">
                     ↗ Live
@@ -116,7 +128,7 @@ export default function FeaturedProjects() {
           className="text-center mt-12"
         >
           <Link href="/projects" data-hover>
-            <motion.span whileHover={{ scale: 1.03 }} className="btn-primary inline-flex items-center gap-2">
+            <motion.span whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} className="btn-secondary inline-flex items-center gap-2 text-sm">
               View All Projects →
             </motion.span>
           </Link>

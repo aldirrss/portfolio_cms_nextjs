@@ -209,14 +209,14 @@ export default function HeroSection() {
               <motion.div animate={{ y: [0, -8, 0] }} transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
                 className="absolute -bottom-4 -right-4 glass rounded-xl px-3 py-2 border border-neon-purple/30"
                 style={{ boxShadow: "0 0 20px rgba(191,0,255,0.2)" }}>
-                <div className="font-mono text-xs text-neon-cyan">{profile.stats[0].value} {profile.stats[0].label}</div>
+                <div className="font-mono text-xs text-neon-cyan">{profile.stats[0].value} Years</div>
                 <div className="font-mono text-[10px] text-slate-500">experience</div>
               </motion.div>
               <motion.div animate={{ y: [0, 8, 0] }} transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
                 className="absolute -top-4 -left-4 glass rounded-xl px-3 py-2 border border-neon-cyan/30"
                 style={{ boxShadow: "0 0 20px rgba(0,255,255,0.2)" }}>
-                <div className="font-mono text-xs text-neon-purple">Odoo</div>
-                <div className="font-mono text-[10px] text-slate-500">Python • DevOps</div>
+                <div className="font-mono text-xs text-neon-purple">Programmer</div>
+                <div className="font-mono text-[10px] text-slate-500">Odoo • Engineer</div>
               </motion.div>
             </div>
           </motion.div>

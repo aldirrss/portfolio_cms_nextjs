@@ -13,14 +13,14 @@ export const profile = {
   email: "aldi@lemacore.com",
   cvUrl: "https://drive.google.com/file/d/151DPU4S5J-QPFdrnJJ0y5haEXE-Dqhkz/view?usp=sharing",
   avatarUrl:
-    "/avatar.png",
+    "/images/profile/avatar.png",
 
   /** Short punchy headline shown in the About Summary on the home page */
   headline: "Full-Stack Developer specializing in ERP backend solutions, Odoo engineering, and enterprise integrations.",
 
   /** Multi-line bio shown in the full About page */
   bio: [
-    "I'm a **Full-Stack Developer** with 4+ years of experience building ERP backends, integration services, and scalable business applications.",
+    "I'm a **Full-Stack Developer** with 3+ years of experience building ERP backends, integration services, and scalable business applications.",
     "Specialized in **Odoo development**, crafting custom modules, integrations, and automation workflows that transform business operations.",
     "Passionate about **clean architecture**, performance optimization, and designing reliable backend systems for real operational workflows.",
     "When I'm not coding, you can find me exploring the latest tech trends, contributing to open-source projects, or sharing insights on my blog.",
@@ -43,7 +43,7 @@ export const profile = {
   ] as (string | number)[],
 
   stats: [
-    { value: "4+",  label: "Years Exp" },
+    { value: "3+",  label: "Years Exp" },
     { value: "10+", label: "Projects" },
     { value: "4+", label: "Clients" },
   ],
@@ -51,7 +51,7 @@ export const profile = {
   quickInfo: [
     { icon: "◈", label: "Location",   value: "Jakarta, Indonesia" },
     { icon: "◎", label: "Education",  value: "D3 Informatics Management" },
-    { icon: "◉", label: "Experience", value: "4+ Years" },
+    { icon: "◉", label: "Experience", value: "3+ Years" },
     { icon: "◫", label: "Status",     value: "Available" },
   ],
 

@@ -193,6 +193,11 @@ No required env vars for basic use. If you add a real contact form backend, crea
 ```env
 NEXT_PUBLIC_SITE_URL=https://yoursite.com
 RESEND_API_KEY=your_resend_key  # for email sending
+SMTP_HOST=smtp.your-provider.com
+SMTP_PORT=587
+SMTP_USER=your-smtp-username
+SMTP_PASS=your-smtp-password
+SMTP_FROM="Portfolio Contact <no-reply@yourdomain.com>"
 ```
 
 ---

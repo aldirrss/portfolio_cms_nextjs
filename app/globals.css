@@ -350,6 +350,8 @@ body {
   box-shadow: 0 8px 28px rgba(37, 99, 235, 0.08);
 }
 .light .text-slate-200 { color: #0f172a !important; }
+.light .text-slate-100 { color: #0f172a !important; }
+.light .text-slate-50 { color: #0b1220 !important; }
 .light .text-slate-300 { color: #1e293b !important; }
 .light .text-slate-400 { color: #334155 !important; }
 .light .text-slate-500 { color: #475569 !important; }
@@ -357,9 +359,6 @@ body {
 .light .text-black { color: #0b1220 !important; }
 .light .text-slate-900 { color: #0b1220 !important; }
 .light .text-gray-900 { color: #0b1220 !important; }
-.light .bg-dark-900 { background-color: var(--dark-900) !important; }
-.light .bg-dark-800 { background-color: var(--dark-800) !important; }
-.light .bg-dark-700 { background-color: var(--dark-700) !important; }
 .light .bg-white { background-color: var(--surface-strong) !important; }
 .light .grid-bg {
   background-image:
@@ -396,7 +395,7 @@ body {
 /* Light theme accent clarity */
 .light .text-neon-purple {
   color: var(--neon-purple) !important;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.65), 0 8px 24px rgba(91, 33, 182, 0.18);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.55), 0 4px 14px rgba(91, 33, 182, 0.12);
 }
 
 .light .text-neon-purple\/60 { color: color-mix(in srgb, var(--neon-purple) 78%, #0f172a) !important; }
@@ -443,19 +442,15 @@ body {
 
 /* Full-page light mode continuity for section backgrounds */
 .light .bg-dark-900 {
-  background:
-    radial-gradient(800px 380px at 0% -6%, rgba(91, 33, 182, 0.09), transparent 62%),
-    linear-gradient(170deg, #f9fbff 0%, #f2f6ff 50%, #ecf2ff 100%) !important;
+  background: #f6f9ff !important;
 }
 
 .light .bg-dark-800 {
-  background:
-    radial-gradient(700px 340px at 100% 0%, rgba(29, 78, 216, 0.08), transparent 60%),
-    linear-gradient(165deg, #f6faff 0%, #eef4ff 55%, #e9f0fe 100%) !important;
+  background: #eff4ff !important;
 }
 
 .light .bg-dark-700 {
-  background: linear-gradient(160deg, #edf4ff 0%, #e7effd 100%) !important;
+  background: #e8eefb !important;
 }
 
 .light .bg-dark-800\/90 {
@@ -497,7 +492,7 @@ body {
 
 .light .text-neon-cyan {
   color: color-mix(in srgb, var(--neon-cyan) 80%, #0f172a) !important;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.72), 0 8px 24px rgba(15, 118, 110, 0.14);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.65), 0 4px 14px rgba(15, 118, 110, 0.1);
 }
 
 .light .btn-primary {
@@ -506,6 +501,12 @@ body {
 
 .light .btn-primary:hover {
   box-shadow: 0 14px 34px rgba(76, 29, 149, 0.26), 0 4px 16px rgba(29, 78, 216, 0.22);
+}
+
+/* Avoid white hover text clashes on light surfaces */
+.light .hover\:text-white:hover,
+.light .group:hover .group-hover\:text-white {
+  color: #0b1220 !important;
 }
 
 .dark .text-white { color: var(--text-strong) !important; }

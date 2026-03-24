@@ -8,7 +8,6 @@ import {
   SiFastapi,
   SiFirebase,
   SiGitlab,
-  SiGithubactions,
   SiGraphql,
   SiJavascript,
   SiLinux,

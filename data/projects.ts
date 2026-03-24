@@ -4,7 +4,7 @@
 // category: "fullstack" | "odoo" | "ai"
 // ─────────────────────────────────────────────────────────────
 
-export type ProjectCategory = "fullstack" | "odoo" | "ai";
+export type ProjectCategory = "fullstack" | "odoo" | "android";
 
 export interface Project {
   id: number;
@@ -16,121 +16,226 @@ export interface Project {
   category: ProjectCategory;
   liveUrl: string;
   githubUrl: string;
+  documentationUrl: string;
+  screenshots: ProjectScreenshot[];
   featured: boolean;
   color: string;
   order: number;
 }
 
+export interface ProjectScreenshot {
+  title: string;
+  imageUrl: string;
+}
+
 export const projects: Project[] = [
   {
     id: 1,
-    slug: "nexacommerce",
+    slug: "hijab-android-app",
     order: 1,
-    title: "NexaCommerce",
+    title: "Hijab Android App",
     description:
-      "Full-featured e-commerce platform with real-time inventory, AI-powered recommendations, and seamless payment gateway integration. Built for scale with microservices architecture.",
+      "Designed and developed an Android application for managing inventory and sales of a hijab retail business. The app features product catalog management, order processing, customer tracking, and sales analytics. Built with Kotlin and integrated with a Laravel backend for seamless data synchronization.",
     imageUrl:
       "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&h=400&fit=crop",
-    tags: ["Next.js", "TypeScript", "Stripe", "PostgreSQL", "Redis", "Docker"],
-    category: "fullstack",
-    liveUrl: "https://demo.com",
-    githubUrl: "https://github.com",
-    featured: true,
+    tags: ["Kotlin", "PHP", "Laravel", "MySQL", "Rest API", "Payments Gateway", "Midtrans"],
+    category: "android",
+    liveUrl: "",
+    githubUrl: "",
+    documentationUrl: "https://docs.hijab-android-app.com",
+    screenshots: [],
+    featured: false,
     color: "#bf00ff",
   },
   {
     id: 2,
-    slug: "odoo-fleet-manager",
+    slug: "rent-car-android-app",
     order: 2,
-    title: "Odoo Fleet Manager",
+    title: "Rent Car Android App",
     description:
-      "Custom Odoo module for comprehensive fleet management — vehicle tracking, maintenance scheduling, fuel consumption analytics, and driver management with OWL components.",
+      "Developed a comprehensive Android application for a car rental service, enabling users to browse available vehicles, make reservations, and manage their bookings. The app includes features such as real-time availability, secure payment processing, and user profile management. Built using Kotlin with a Laravel backend for robust data handling and synchronization.",
     imageUrl:
       "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop",
-    tags: ["Odoo 16", "Python", "OWL", "QWeb", "PostgreSQL"],
-    category: "odoo",
-    liveUrl: "https://demo.com",
-    githubUrl: "https://github.com",
-    featured: true,
+    tags: ["Kotlin", "PHP", "Laravel", "MySQL", "Rest API", "Face Recognition"],
+    category: "android",
+    liveUrl: "",
+    githubUrl: "",
+    documentationUrl: "https://docs.rent-car-android-app.com",
+    screenshots: [],
+    featured: false,
     color: "#00ffff",
   },
   {
     id: 3,
-    slug: "devboard-analytics",
+    slug: "vapestore-android-app",
     order: 3,
-    title: "DevBoard Analytics",
+    title: "VapeStore Android App",
     description:
-      "Real-time developer analytics dashboard integrating GitHub, Jira, and Slack APIs. Visualize team velocity, PR cycle times, and deployment frequency.",
+      "Designed and developed an Android application for a vape store, featuring product browsing, shopping cart functionality, and secure checkout. Integrated with a Node.js backend for real-time inventory management and order processing.",
     imageUrl:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
-    tags: ["React", "D3.js", "Node.js", "GraphQL", "WebSocket"],
-    category: "fullstack",
-    liveUrl: "https://demo.com",
-    githubUrl: "https://github.com",
+      "https://aldi.alrasyid.live/_next/image?url=%2Fassets%2Fproject%2Fthumb7.png&w=1920&q=75",
+    tags: ["Kotlin", "PHP", "Laravel", "MySQL", "Rest API"],
+    category: "android",
+    liveUrl: "",
+    githubUrl: "",
+    documentationUrl: "https://docs.vapestore-android-app.com",
+    screenshots: [],
     featured: false,
     color: "#0080ff",
   },
   {
     id: 4,
-    slug: "hrconnect-erp",
+    slug: "atlet-management-laravel",
     order: 4,
-    title: "HRConnect ERP",
+    title: "Atlet Management System",
     description:
-      "End-to-end HR module built on Odoo with payroll automation, leave management, performance appraisal, and custom reporting — serving 500+ employees.",
+      "Comprehensive athlete management system built with Laravel, providing features for athlete registration, event scheduling, performance tracking, and reporting. The system includes a user-friendly admin dashboard for managing athletes and events, as well as a public-facing interface for event information and athlete profiles.",
     imageUrl:
-      "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600&h=400&fit=crop",
-    tags: ["Odoo 17", "Python", "XML-RPC", "PostgreSQL", "Nginx"],
-    category: "odoo",
-    liveUrl: "https://demo.com",
-    githubUrl: "https://github.com",
+      "https://aldi.alrasyid.live/_next/image?url=%2Fassets%2Fproject%2Fthumb6.png&w=1920&q=75",
+    tags: ["Laravel", "PHP", "MySQL", "Blade", "JavaScript", "HTML/CSS"],
+    category: "fullstack",
+    liveUrl: "",
+    githubUrl: "",
+    documentationUrl: "https://docs.atlet-management-laravel.com",
+    screenshots: [],
     featured: false,
     color: "#bf00ff",
   },
   {
     id: 5,
-    slug: "cloudvault-storage",
+    slug: "kos-management-laravel",
     order: 5,
-    title: "CloudVault Storage",
+    title: "Kos Management System",
     description:
-      "Secure file storage and sharing platform with end-to-end encryption, real-time collaboration, version history, and S3-compatible API. Handles petabytes of data.",
+      "Comprehensive student housing management system built with Laravel, providing features for room allocation, payment processing, maintenance requests, and reporting. The system includes a user-friendly admin dashboard for managing properties and tenants, as well as a tenant-facing interface for submitting requests and viewing account information.",
     imageUrl:
-      "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=600&h=400&fit=crop",
-    tags: ["Next.js", "AWS S3", "FastAPI", "Redis", "Docker"],
+      "https://aldi.alrasyid.live/_next/image?url=%2Fassets%2Fproject%2Fthumb5.png&w=1920&q=75",
+    tags: ["Laravel", "PHP", "MySQL", "Blade", "JavaScript", "HTML/CSS"],
     category: "fullstack",
-    liveUrl: "https://demo.com",
-    githubUrl: "https://github.com",
+    liveUrl: "",
+    githubUrl: "",
+    documentationUrl: "https://docs.kos-management-laravel.com",
+    screenshots: [],
     featured: false,
     color: "#00ffff",
   },
   {
     id: 6,
-    slug: "ai-code-review-bot",
+    slug: "dinas-budaya-laravel",
     order: 6,
-    title: "AI Code Review Bot",
+    title: "Dinas Budaya Laravel",
     description:
-      "GitHub bot leveraging OpenAI GPT-4 for automated code reviews. Catches bugs, suggests improvements, ensures style consistency, and generates PR summaries.",
+      "Web application for managing cultural heritage data and events, built with Laravel. Features include user authentication, content management, and reporting.",
     imageUrl:
-      "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=600&h=400&fit=crop",
-    tags: ["Node.js", "OpenAI", "GitHub API", "TypeScript", "Webhooks"],
-    category: "ai",
-    liveUrl: "https://demo.com",
-    githubUrl: "https://github.com",
+      "https://aldi.alrasyid.live/_next/image?url=%2Fassets%2Fproject%2Fthumb4.png&w=1920&q=75",
+    tags: ["Laravel", "PHP", "MySQL", "Blade", "JavaScript", "HTML/CSS"],
+    category: "fullstack",
+    liveUrl: "",
+    githubUrl: "",
+    documentationUrl: "https://docs.dinas-budaya-laravel.com",
+    screenshots: [],
     featured: false,
     color: "#ff00ff",
   },
+  {
+    id: 7,
+    slug: "ppdb-management-odoo",
+    order: 7,
+    title: "PPDB Management System",
+    description:
+      "Web application for managing student admission processes, built with Odoo. Features include user authentication, application tracking, and reporting.",
+    imageUrl:
+      "https://aldi.alrasyid.live/_next/image?url=%2Fassets%2Fproject%2Fthumb3.png&w=1920&q=75",
+    tags: ["Odoo", "Python", "PostgreSQL", "JavaScript", "OWL", "QWeb"],
+    category: "odoo",
+    liveUrl: "",
+    githubUrl: "",
+    documentationUrl: "https://docs.ppdb-management-odoo.com",
+    screenshots: [],
+    featured: false,
+    color: "#bf00ff",
+  },
+  {
+    id: 8,
+    slug: "clinic-management-odoo",
+    order: 8,
+    title: "Clinic Management System",
+    description:
+      "Web application for managing clinic operations, built with Odoo. Features include patient management, appointment scheduling, and reporting.",
+    imageUrl:
+      "https://aldi.alrasyid.live/_next/image?url=%2Fassets%2Fproject%2Fthumb2.png&w=1920&q=75",
+    tags: ["Odoo", "Python", "PostgreSQL", "JavaScript", "OWL", "QWeb"],
+    category: "odoo",
+    liveUrl: "",
+    githubUrl: "https://github.com/aldirrss/clinic_management.git",
+    documentationUrl: "https://docs.clinic-management-odoo.com",
+    screenshots: [],
+    featured: true,
+    color: "#00ffff",
+  },
+  {
+    id: 9,
+    slug: "restaurant-fairy-kale",
+    order: 9,
+    title: "Restaurant Fairy Kale",
+    description:
+      "Web application for managing restaurant operations, built with Odoo. Features include menu management, order processing, and reporting.",
+    imageUrl:
+      "https://aldi.alrasyid.live/_next/image?url=%2Fassets%2Fproject%2Fthumb1.png&w=1920&q=75",
+    tags: ["Odoo", "Python", "PostgreSQL", "JavaScript", "OWL", "QWeb", "Docker"],
+    category: "odoo",
+    liveUrl: "",
+    githubUrl: "",
+    documentationUrl: "https://docs.restaurant-fairy-kale.com",
+    screenshots: [],
+    featured: true,
+    color: "#0080ff",
+  },
+  {
+    id: 10,
+    slug: "agriculture-management-odoo",
+    order: 10,
+    title: "Agriculture Management System",
+    description:
+      "Web application for managing agricultural operations, built with Odoo. Features include crop tracking, inventory management, and reporting.",
+    imageUrl:
+      "/images/projects/10/thumbnail.png",
+    tags: ["Odoo", "Python", "PostgreSQL", "JavaScript", "OWL", "QWeb"],
+    category: "odoo",
+    liveUrl: "https://demo.lemacore.com",
+    githubUrl: "",
+    documentationUrl: "https://docs.agriculture-management-odoo.com",
+    screenshots: [
+      {
+        title: "Login Page",
+        imageUrl:
+          "/images/projects/10/img1.png",
+      },
+    ],
+    featured: true,
+    color: "#00ff80",
+  }
 ];
 
 /** Returns the 3 most-recently-ordered featured projects for the home page */
 export function getFeaturedProjects(limit = 3): Project[] {
   return projects
     .filter((p) => p.featured) // all projects are candidates; adjust filter as needed
-    .sort((o) => o.order)
+    .sort((a, b) => a.order - b.order)
     .slice(0, limit);
+}
+
+export function getProjectBySlug(slug: string): Project | undefined {
+  return projects.find((project) => project.slug === slug);
+}
+
+export function getProjectScreenshots(project: Project): ProjectScreenshot[] {
+  return project.screenshots ?? [];
 }
 
 export const projectCategories = [
   { id: "all",       label: "All" },
-  { id: "fullstack", label: "Full-Stack" },
   { id: "odoo",      label: "Odoo" },
-  { id: "ai",        label: "AI/ML" },
+  { id: "fullstack", label: "Full-Stack" },
+  { id: "android",   label: "Android" },
 ] as const;
