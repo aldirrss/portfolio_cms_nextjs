@@ -22,11 +22,11 @@ jobs:
           key: ${{ secrets.VPS_SSH_KEY }}
           port: ${{ secrets.VPS_PORT }}
           script: |
-            cd /opt/lema-catalog-nextjs
+            cd /opt/portfolio_cms_nextjs
             git pull origin main
             npm install
             npm run build
-            pm2 restart lema-catalog-nextjs || pm2 start npm --name "lema-catalog-nextjs" -- start
+            pm2 restart portfolio_cms_nextjs || pm2 start npm --name "portfolio_cms_nextjs" -- start
             echo "✅ Deployment completed!"
 
       - name: Send Email (Success)
@@ -39,16 +39,16 @@ jobs:
           password: ${{ secrets.MAIL_PASSWORD }}
           to: ${{ secrets.MAIL_TO }}
           from: GitHub Actions <${{ secrets.MAIL_USERNAME }}>
-          subject: "✅ Deploy Completed - lema-catalog-nextjs"
+          subject: "✅ Deploy Completed - portfolio_cms_nextjs"
           body: |
             Deploy completed! 🎉
 
             Details:
-            - Project  : lema-catalog-nextjs
-            - Branch   : ${{ github.ref_name }}
-            - Commit   : ${{ github.event.commits[0].message }}
-            - Author   : ${{ github.actor }}
-            - Date     : ${{ github.event.head_commit.timestamp }}
+            - Project: portfolio_cms_nextjs
+            - Branch : ${{ github.ref_name }}
+            - Commit : ${{ github.event.commits[0].message }}
+            - Author : ${{ github.actor }}
+            - Date   : ${{ github.event.head_commit.timestamp }}
 
             See Details: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
 
@@ -62,15 +62,15 @@ jobs:
           password: ${{ secrets.MAIL_PASSWORD }}
           to: ${{ secrets.MAIL_TO }}
           from: GitHub Actions <${{ secrets.MAIL_USERNAME }}>
-          subject: "❌ Deploy Failed - lema-catalog-nextjs"
+          subject: "❌ Deploy Failed - portfolio_cms_nextjs"
           body: |
             Deploy failed! ⚠️
 
             Details:
-            - Project  : lema-catalog-nextjs
-            - Branch   : ${{ github.ref_name }}
-            - Commit   : ${{ github.event.commits[0].message }}
-            - Author   : ${{ github.actor }}
-            - Date     : ${{ github.event.head_commit.timestamp }}
+            - Project: portfolio_cms_nextjs
+            - Branch : ${{ github.ref_name }}
+            - Commit : ${{ github.event.commits[0].message }}
+            - Author : ${{ github.actor }}
+            - Date   : ${{ github.event.head_commit.timestamp }}
 
             Check Error: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
