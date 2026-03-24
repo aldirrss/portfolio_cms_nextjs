@@ -123,8 +123,8 @@ export const projects: Project[] = [
 /** Returns the 3 most-recently-ordered featured projects for the home page */
 export function getFeaturedProjects(limit = 3): Project[] {
   return projects
-    .filter((p) => p.featured || true) // all projects are candidates; adjust filter as needed
-    .sort((a, b) => a.order - b.order)
+    .filter((p) => p.featured) // all projects are candidates; adjust filter as needed
+    .sort((o) => o.order)
     .slice(0, limit);
 }
 

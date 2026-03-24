@@ -13,6 +13,8 @@ export default function ProjectsSection({ showHeader = false }: { showHeader?: b
   const filtered =
     filter === "all" ? projects : projects.filter((p) => p.category === filter);
 
+  const sortedOrderDesc = [...filtered].sort((o) => o.order).reverse();
+
   return (
     <section className="relative py-16 lg:py-24 overflow-hidden">
       <div className="absolute inset-0 bg-dark-800/40" />
@@ -46,7 +48,7 @@ export default function ProjectsSection({ showHeader = false }: { showHeader?: b
 
         <motion.div layout className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <AnimatePresence mode="popLayout">
-            {filtered.map((project, i) => (
+            {sortedOrderDesc.map((project, i) => (
               <motion.div key={project.id} layout
                 initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
